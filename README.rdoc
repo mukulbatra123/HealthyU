@@ -1,0 +1,8 @@
+# HeathyU
+HealthyU is a web application using Ruby on Rails framework to help users build muscle groups of their choice while getting the proper nutritional intake to ultimately create a HealthierU. 
+We work so you work out.
+
+What would be more convenient other than knowing what muscle to work out and what food to eat? 
+We're going to help you keep a record of your workout logs and the caloric intake as well as the macros you'll need to achieve your goal.
+
+Our team consists of Mukul Batra, Renee Russo, Piruthviraj Angamuthu Selvaraju, Steven Liounis and Mei Sheinbaum.
