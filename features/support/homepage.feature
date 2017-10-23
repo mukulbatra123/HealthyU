@@ -18,10 +18,15 @@ Feature: display the homepage with title
     
   Scenario: Title present
     Given I am on the homepage
-    When I look on the page 
     Then I should see the title "HealthyU"
     
   Scenario: Exercise link present
     Given I am on the homepage
     When I click the exercise link
-    Then I should be on the homepage
+    Then I should be on the exercises page
+    
+    
+    
+    
+    
+    
