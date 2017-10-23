@@ -2,8 +2,8 @@ Given(/^I have not opened the application$/) do
   
 end
 
-When("I click on the link") do |link|
-  click_link(link)
+When("I click the exercise link") do
+  click_link("Exercises")
 end
 
 Then /I should be on the homepage/ do
