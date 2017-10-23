@@ -18,6 +18,11 @@ When("I look on the page") do
   
 end
 
+
+When ("I click the exercise link") do |selector|
+  find(selector).click
+  end
+  
 Then /I should see the title "HealthyU"/ do
   page.should have_content("HealthyU")
 end
