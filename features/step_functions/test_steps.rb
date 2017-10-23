@@ -14,8 +14,8 @@ Given(/^I am on the homepage$/) do
   visit "/"
 end
 
-When("I look on the page") do
-  
+Then /I should be on the exercises page/ do
+  visit exercises_path
 end
 
 Then /I should see the title "HealthyU"/ do
