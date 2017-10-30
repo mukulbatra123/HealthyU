@@ -23,7 +23,7 @@ Then /I should be on the exercises page/ do
 end
 
 Then /I should be on the nutrition page/ do
-  visit nutrition_path
+  visit '/nutrition'
 end
 
   
