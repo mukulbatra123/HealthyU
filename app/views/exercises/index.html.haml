@@ -1,0 +1,21 @@
+%h1 Exercises
+
+%table{:border => 1}
+    %tbody
+        %tr
+            %th Chest
+            %th Back
+            %th Shoulders
+            %th Biceps
+            %th Triceps
+            %th Legs
+            %th Abs
+            %th Cardio
+%br
+
+%table{:border => 1}
+    %tbody
+        %tr
+            %th Exercises
+            -#@MuscleGroup.each do |x|
+            -#x.show-exercise
