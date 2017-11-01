@@ -1,0 +1,31 @@
+%h1{id: "heading"} Exercises
+
+
+Exercise is one of the most important parts of keeping your body at a healthy weight. Exercise helps people lose weight and lower the risk of some diseases. Exercising to maintain a healthy weight decreases a person's risk of developing certain diseases
+
+%hr 
+
+%br
+%br
+
+
+
+%table{:border => 1,id: "exer"}
+    %tbody
+        %tr
+            %th Chest
+            %th Back
+            %th Shoulders
+            %th Biceps
+            %th Triceps
+            %th Legs
+            %th Abs
+            %th Cardio
+%br
+
+%table{:border => 1}
+    %tbody
+        %tr
+            %th Exercises
+            -#@MuscleGroup.each do |x|
+            -#x.show-exercise
