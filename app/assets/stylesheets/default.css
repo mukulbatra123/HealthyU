@@ -5,11 +5,22 @@ body{
 
 hr{color:white;}
 
-th{
-    color:white;
+td#exer1{
+    color:black;
     font-weight: bold;
     font-size: 30px;
+    font-style: normal;
 }
+
+table#exer
+{
+   border-color: white;
+   border-style: solid;
+   border: 1px
+   
+    
+}
+
 
 table
 {
@@ -23,6 +34,31 @@ table
     color:white;
     
 }
+
+#newexer
+{
+  color: white;  
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+#newexer:hover
+{
+  color: white;  
+    text-decoration: underline overline;
+    margin-left: 0px;
+}
+
+#exerh
+{
+    color: white;
+    font-size: 80px;
+    column-gap: normal;
+    text-align: center;
+    
+    
+}
+
 
 a{ 
  color: white;
