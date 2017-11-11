@@ -9,12 +9,10 @@ Exercise is one of the most important parts of keeping your body at a healthy we
 %br
 
 
-%table{:border => 1}
+
+%table{:border => 1,id: "exer"}
     %tbody
         %tr
-            %th Exercises
-            -#@MuscleGroup.each do |x|
-            -#x.show-exercise
             %th= link_to "Chest", '#chest', {id: "newexer"}
             %th= link_to "Back", '#back', {id: "newexer"}
             %th= link_to "Shoulders", '#shoulders', {id: "newexer"}
