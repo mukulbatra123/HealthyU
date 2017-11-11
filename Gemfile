@@ -40,4 +40,8 @@ gem 'protected_attributes'
 # gem 'unicorn'
 
 # Deploy with Capistrano
+<<<<<<< HEAD
 # gem 'capistrano'
+=======
+# gem 'capistrano'
+>>>>>>> 41982980cd29c42aa95b92b35044d2110124cb08
