@@ -122,6 +122,90 @@ Exercise is one of the most important parts of keeping your body at a healthy we
 %br
 %br
 %br
+            %td Performed on an incline bench.
+            
+                
+                
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+
+
+                
+            
+#back
+
+%table{:border => 1}
+    %tbody
+        %tr 
+            %td{id: "exerh",:colspan => 2} Back
+            -#@MuscleGroup.each do |x|
+            -#x.show-exercise
+            
+        %tr
+            %td Lat Pulldowns
+            %td
+                %ol
+                    %li Sit at a lat pulldown station and grab the bar with an overhand grip that's just beyond shoulder width. Your arms should be completely straight and your torso upright.
+                    %li Pull your shoulder blades down and back, and bring the bar to your chest. Pause, then slowly return to the starting position.
+            
+            
+        %tr
+            %td Barbell Rows
+            %td 
+                %ol
+                    %li Holding a barbell with a pronated grip (palms facing down), bend your knees slightly and bring your torso forward, by bending at the waist, while keeping the back straight until it is almost parallel to the floor. Tip: Make sure that you keep the head up. The barbell should hang directly in front of you as your arms hang perpendicular to the floor and your torso. This is your starting position.
+                    %li Now, while keeping the torso stationary, breathe out and lift the barbell to you. Keep the elbows close to the body and only use the forearms to hold the weight. At the top contracted position, squeeze the back muscles and hold for a brief pause.
+                    %li Then inhale and slowly lower the barbell back to the starting position.
+                    %li Repeat for the recommended amount of repetitions.
+%br
+%br
+%br
+%br
+%br
+%br
+
+%br                   
+                    
+
+#shoulders
+
+%table{:border => 1}
+    %tbody
+        %tr 
+            %td{id: "exerh",:colspan => 2} Shoulders
+            -#@MuscleGroup.each do |x|
+            -#x.show-exercise
+            
+        %tr
+            %td Overhead Military Press
+            %td
+                %ol
+                    %li Start by placing a barbell that is about chest high on a squat rack. Once you have selected the weights, grab the barbell using a pronated (palms facing forward) grip. Make sure to grip the bar wider than shoulder width apart from each other.
+                    %li Slightly bend the knees and place the barbell on your collar bone. Lift the barbell up keeping it lying on your chest. Take a step back and position your feet shoulder width apart from each other.
+                    %li Once you pick up the barbell with the correct grip length, lift the bar up over your head by locking your arms. Hold at about shoulder level and slightly in front of your head. This is your starting position.
+                    %li Lower the bar down to the collarbone slowly as you inhale.
+                    %li Lift the bar back up to the starting position as you exhale.
+                    %li Repeat for the recommended amount of repetitions.
+            
+            
+        %tr
+            %td Dumbell Lateral Raises
+            %td 
+                %ol
+                    %li Pick a couple of dumbbells and stand with a straight torso and the dumbbells by your side at arms length with the palms of the hand facing you. This will be your starting position.
+                    %li While maintaining the torso in a stationary position (no swinging), lift the dumbbells to your side with a slight bend on the elbow and the hands slightly tilted forward as if pouring water in a glass. Continue to go up until you arms are parallel to the floor. Exhale as you execute this movement and pause for a second at the top.
+                    %li Lower the dumbbells back down slowly to the starting position as you inhale.
+                    %li Repeat for the recommended amount of repetitions.
+                    
+
+
+
+
 %br
 %br
 %br
@@ -143,16 +227,12 @@ Exercise is one of the most important parts of keeping your body at a healthy we
 %br
 %br
 %br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
+
+%table
+    %tr
+        %td= link_to "Home", '/', {id: "newexer"}
+        %td= link_to "About Us", '', {id: "newexer"}
+        %td= link_to "Exercises", '', {id: "newexer"}
+        %td= link_to "Nutrition", 'nutrition', {id: "newexer"}
+        %td= link_to "Contact Us", '', {id: "newexer"}
+        

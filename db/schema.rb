@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 5) do
 
   create_table "exercises", force: :cascade do |t|
@@ -19,5 +20,8 @@ ActiveRecord::Schema.define(version: 5) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+end
+ActiveRecord::Schema.define(version: 0) do
+
 
 end

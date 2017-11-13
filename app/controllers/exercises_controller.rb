@@ -1,5 +1,6 @@
 class ExercisesController < ApplicationController
     def index
+
         @exercises = Exercise.find :all
     end
     def show
@@ -38,5 +39,6 @@ class ExercisesController < ApplicationController
         flash[:notice] = "#{@exercise.muscle} was successfully updated."
         redirect_to exercise_path(@exercise)
            # redirect_to :action => 'show', :id => @exercise.id
+
     end
 end
