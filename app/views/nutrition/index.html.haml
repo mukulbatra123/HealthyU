@@ -1,5 +1,48 @@
 %h1{id: "heading"} Nutrition 
 
+Description
+
+%hr 
+
+%br
+%br
+%table{:border => 1, id: "nutri"}
+    %tbody
+        %tr
+            %th Group 1
+            %th Group 2
+            %th Group 3
+        %tr
+            %td Foods in Group 1
+            %td Foods in Group 2
+            %td Foods in Group 3
+%br
+
+%center
+    Calorie Intake Calculator
+    %br
+
+%table{:border => 1, id: "calculator"}
+    %tbody
+        %tr
+            %th Height
+            %th Weight
+            %th Age
+        %tr
+            %td
+                %input#height{:name => "height", :size => "10", :type => "text"}/
+                
+            %td
+                %input#weight{:name => "weight", :size => "10", :type => "text"}/
+            %td
+                %input#age{:name => "age", :size => "10", :type => "text"}/
+%br
+%center
+    Something that sends input data to params
+    %br
+    Calculator Output: 
+    %output= @Calc
+%br
 
 %table
     %tr

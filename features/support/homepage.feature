@@ -1,5 +1,3 @@
-
-
 Feature: display the homepage with title
 
   As a user opening the application

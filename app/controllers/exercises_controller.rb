@@ -1,7 +1,11 @@
 class ExercisesController < ApplicationController
+    
+    def exercise_params
+        params.require(:exercise).permit(:muscle, :description)
+    end
+    
     def index
-
-        @exercises = Exercise.find :all
+        #@exercises = Exercise.find :all
     end
     def show
         @exercise = Exercise.find params[:id] #look up exercise by unique muscle id
