@@ -1,0 +1,12 @@
+%h1 Edit Existing Muscle
+
+= form_tag exercise_path(@exercise), :method => :put do
+
+  = label :exercise, :muscle, 'muscle'
+  = text_field :exercise, 'muscle'
+
+  = label :exercise, :description, 'description'
+  = text_field :exercise, 'description'
+
+  = submit_tag 'Update Muscle Info'
+  

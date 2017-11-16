@@ -1,0 +1,11 @@
+%h1 Enter New Muscle
+
+= form_tag exercises_path do
+
+  = label :exercise, :muscle, 'muscle'
+  = text_field :exercise, 'muscle'
+
+  = label :exercise, :description, 'description'
+  = text_field :exercise, 'description'
+
+  = submit_tag 'Save Changes'

@@ -8,7 +8,6 @@ Exercise is one of the most important parts of keeping your body at a healthy we
 %br
 %br
 
-
 %table{:border => 1,id: "exer"}
     %tbody
         %tr
@@ -22,6 +21,19 @@ Exercise is one of the most important parts of keeping your body at a healthy we
             %th= link_to "Cardio", '#cardio', :id => 'exercise'
 %br
 %br
+
+Input the exercises you have completed for the week
+
+
+%table{:border => 1,id: "exer"}
+    %tbody
+    - @exercises.each do |exercise|
+        %tr
+            %td= exercise.muscle
+            %td= exercise.description
+%br
+%br
+= link_to '<button type="button">Add New Exercise</button>'.html_safe, new_exercise_path
 %br
 %br
 %br
@@ -189,3 +201,6 @@ Exercise is one of the most important parts of keeping your body at a healthy we
         %td= link_to "Nutrition", 'nutrition', {id: "newexer"}
         %td= link_to "Contact Us", '', {id: "newexer"}
         
+        
+
+= link_to "Home", '/', {id: "newexer"}
