@@ -15,17 +15,8 @@ class ExercisesController < ApplicationController
     end
     def create
         @exercise = Exercise.create!(params.require(:exercise).permit(:muscle, :description))
-       # @exercise = Exercise.create!(params[:exercise])
         flash[:notice] = "#{@exercise.muscle} was successfully created."
-       # @exercise = Exercise.new params[:exercise]
         redirect_to exercises_path
-=begin
-        if @exercise.save
-            redirect_to :action => 'show', :id => @exercise.id
-        else
-            render :action => 'new'
-        end
-=end
     end
     
     def destroy
@@ -41,7 +32,6 @@ class ExercisesController < ApplicationController
     def update
         @exercise = Exercise.find params[:id]
         @exercise.update_attributes!(params.require(:exercise).permit(:muscle, :description))
-       # @exercise.update_attributes!(params[:exercise])
         flash[:notice] = "#{@exercise.muscle} was successfully updated."
         redirect_to exercise_path(@exercise)
            # redirect_to :action => 'show', :id => @exercise.id

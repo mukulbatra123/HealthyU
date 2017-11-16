@@ -29,7 +29,7 @@ Input the exercises you have completed for the week
     %tbody
     - @exercises.each do |exercise|
         %tr
-            %td= exercise.muscle
+            %td= link_to(exercise.muscle, {:action => 'show', :id => exercise.id}, :class => 'action show')
             %td= exercise.description
 %br
 %br
@@ -200,7 +200,3 @@ Input the exercises you have completed for the week
         %td= link_to "Exercises", '', {id: "newexer"}
         %td= link_to "Nutrition", 'nutrition', {id: "newexer"}
         %td= link_to "Contact Us", '', {id: "newexer"}
-        
-        
-
-= link_to "Home", '/', {id: "newexer"}

@@ -1,4 +1,4 @@
-%h2 Details about #{@exercise.muscle}
+%h2 Details about your #{@exercise.muscle} muscle exercise
 
 %ul#details
   %li
@@ -8,6 +8,6 @@
     Muscle Exercise:
     = @exercise.description
 
-= link_to '<button type="button">Edit</button>'.html_safe, edit_exercises_path(@exercise)
+= link_to '<button type="button">Edit</button>'.html_safe, edit_exercise_path(@exercise)
 = button_to 'Delete', exercise_path(@exercise), :method => :delete, :confirm => 'Are you sure?'
-= link_to '<button type="button"><< Back</button>'.html_safe, exercises_path
+= link_to '<button type="button">Back</button>'.html_safe, exercises_path

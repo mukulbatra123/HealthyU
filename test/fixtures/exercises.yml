@@ -2,3 +2,7 @@ one:
     id: 1
     muscle: Chest
     description: Flat Dumbbell Press
+two:
+    id: 2
+    muscle: Shoulders
+    description: Overhead Military Press
