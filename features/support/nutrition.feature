@@ -12,23 +12,23 @@ Scenario: Showing collection of recommended calorie intakes
 Scenario: Deleting a single calorie output
     Background: Recommended calorie intakes in the database
     Given I am on the nutrition page
-    When I press "calorie output"
+    When I press "Add New Info"
     And I press the "Delete" button
     Then I should not see "old calorie output"
     
 Scenario: Successfully updating a single calorie output
     Background: Recommended calorie intakes in the database
     Given I am on the nutrition page
-    When I press "Calorie output"
+    When I press "Height"
     And I press "Edit"
-    And I fill in "height" with "new height"
-    When I press the "Update Calorie Info" button
+    And I fill in "height (inches)" with "new height"
+    When I press the "Update Nutrition Information" button
     And I should see "new height" and "new calorie output"
     
 Scenario: Adding calorie intake
     Given I am on the nutrition page
-    When I press "Calculate calorie intake"
-    And I fill in "height" with "x"
-    And I fill in "weight" with "y"
-    When I press the "Calorie output" button
+    When I press "Add New Info"
+    And I fill in "height (inches)" with "x"
+    And I fill in "weight (pounds)" with "y"
+    When I press the "Save Information" button
     Then I should see "x" and "y"

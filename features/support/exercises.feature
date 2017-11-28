@@ -13,9 +13,6 @@ Feature: display the exercise page
     When I click on the muscle link
     Then I should be on the exercises page
     
-  Scenario: Showing exercises
-    Given I am on the exercise page
-    
   Scenario: Adding exercises
     Given I am on the exercise page
     When I press "Add New Exercise"
@@ -26,11 +23,13 @@ Feature: display the exercise page
     
   Scenario: Editing exercises
     Given I am on the exercise page
+    # background
     When I press "Add New Exercise"
     And I fill in "muscle" with "Eye"
     And I fill in "description" with "Blink"
     When I press the "Save Exercise" button
     Then I should see "Eye" and "Blink"
+    # background
     When I press "Eye"
     And I press "Edit"
     And I fill in "muscle" with "Eyeball"
@@ -39,11 +38,13 @@ Feature: display the exercise page
     
   Scenario: Deleting exercises
     Given I am on the exercise page
+    # background
     When I press "Add New Exercise"
     And I fill in "muscle" with "Eye"
     And I fill in "description" with "Blink"
     When I press the "Save Exercise" button
     Then I should see "Eye" and "Blink"
+    # background
     When I press "Eye"
     And I press the "Delete" button
     Then I should not see "Eyeball"

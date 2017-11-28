@@ -1,7 +1,8 @@
 %h1{id: "heading"} Nutrition 
 
-Description
-
+%center
+    This is a nutrition page to provide you with heathy eating habits
+    %br
 %hr 
 
 %br
@@ -40,29 +41,6 @@ Description
             %td= nutrition.age
             %td= nutrition.calories
 %br
-%center
-    Calorie Intake Calculator
-    %br
-%table{:border => 1, id: "calculator"}
-    %tbody
-        %tr
-            %th Height
-            %th Weight
-            %th Age
-        %tr
-            %td
-                %input#height{:name => "height", :size => "10", :type => "text"}/
-                
-            %td
-                %input#weight{:name => "weight", :size => "10", :type => "text"}/
-            %td
-                %input#age{:name => "age", :size => "10", :type => "text"}/
-%br
-%center
-    Something that sends input data to params
-    %br
-    Calculator Output: 
-    %output= @Calc
 %br
 
 %table

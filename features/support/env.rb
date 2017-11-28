@@ -25,6 +25,8 @@ Capybara.default_selector = :css
 # 1) Tag your scenario (or feature) with @allow-rescue
 #
 # 2) Set the value below to true. Beware that doing this globally is not
+require 'simplecov'
+SimpleCov.start 'rails'
 # recommended as it will mask a lot of errors for you!
 #
 ActionController::Base.allow_rescue = false

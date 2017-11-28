@@ -1,10 +1,4 @@
 class NutritionsController < ApplicationController
-    # def nutrition_params
-    #     params.permit(:height,:weight, :age)
-    #     params[:height].nil ? 0 : params[:height].to_i
-    #     params[:weight].nil ? 0 : params[:weight].to_i
-    #     params[:age].nil ? 0 : params[:age].to_i
-    # end
     def nutrition_params
         params.require(:nutrition).permit(:height,:weight, :age)
     end

@@ -39,7 +39,7 @@ Given(/^I am on the exercise page$/) do
 end
 
 Given(/^I am on the nutrition page$/) do
-  visit "/exercises"
+  visit "/nutrition"
 end
 
 Then /I should be on the exercises page/ do

@@ -15,6 +15,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'turbolinks'
   gem 'factory_bot_rails'
+  gem 'simplecov'
 end
 
 group :test do
