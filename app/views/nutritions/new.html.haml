@@ -1,0 +1,15 @@
+%h1 Enter New Nutrition Information
+
+= form_tag nutritions_path do
+
+  = label :nutrition, :height, 'height (inches)'
+  = text_field :nutrition, 'height'
+
+  = label :nutrition, :weight, 'weight (pounds)'
+  = text_field :nutrition, 'weight'
+
+  = label :nutrition, :age, 'age (years)'
+  = text_field :nutrition, 'age'
+  
+
+  = submit_tag 'Save Information'

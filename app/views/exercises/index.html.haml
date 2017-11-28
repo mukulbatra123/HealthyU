@@ -24,14 +24,15 @@ Exercise is one of the most important parts of keeping your body at a healthy we
 
 Input the exercises you have completed for the week
 
-
-%table{:border => 1,id: "exer"}
+%table{:border => 1}
     %tbody
+        %tr
+            %td= "Muscle"
+            %td= "Exercise"
     - @exercises.each do |exercise|
         %tr
             %td= link_to(exercise.muscle, {:action => 'show', :id => exercise.id}, :class => 'action show')
             %td= exercise.description
-%br
 %br
 = link_to '<button type="button">Add New Exercise</button>'.html_safe, new_exercise_path
 %br

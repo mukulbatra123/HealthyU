@@ -1,0 +1,19 @@
+%h2 Details about your suggested #{@nutrition.calories} caloric intake
+
+%ul#details
+  %li
+    Height:
+    = @nutrition.height
+  %li
+    Weight:
+    = @nutrition.weight
+  %li
+    Age:
+    = @nutrition.age
+  %li
+    Calories:
+    = @nutrition.calories
+
+= link_to '<button type="button">Edit</button>'.html_safe, edit_nutrition_path(@nutrition)
+= button_to 'Delete', nutrition_path(@nutrition), :method => :delete, :confirm => 'Are you sure?'
+= link_to '<button type="button">Back</button>'.html_safe, nutritions_path

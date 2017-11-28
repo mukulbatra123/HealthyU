@@ -14,6 +14,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'turbolinks'
+  gem 'factory_bot_rails'
 end
 
 group :test do

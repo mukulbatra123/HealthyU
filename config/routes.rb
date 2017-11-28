@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   get 'homepage/index'
   resources :exercises
 
-  resources :nutrition
+  resources :nutritions
   root 'homepage#index'
 end

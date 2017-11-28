@@ -17,11 +17,3 @@ Feature: display the homepage with title
     Given I am on the homepage
     When I click the nutrition link
     Then I should be on the nutrition page
-    
-    
-    
-    
-    
-    
-
-    

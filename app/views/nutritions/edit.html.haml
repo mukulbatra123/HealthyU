@@ -1,0 +1,14 @@
+%h1 Edit Nutrition Information
+
+= form_tag nutrition_path(@nutrition), :method => :put do
+
+  = label :nutrition, :height, 'height (inches)'
+  = text_field :nutrition, 'height'
+
+  = label :nutrition, :weight, 'weight (pounds)'
+  = text_field :nutrition, 'weight'
+
+  = label :nutrition, :age, 'age (years)'
+  = text_field :nutrition, 'age'  
+
+  = submit_tag 'Update Nutrition Information'

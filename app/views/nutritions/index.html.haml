@@ -17,11 +17,32 @@ Description
             %td Foods in Group 2
             %td Foods in Group 3
 %br
-
+%br
+%center
+    Input Information to get a healthy caloric intake to lose two pounds per week
+    %br
+%br
+%center
+    = link_to '<button type="button">Add New Info</button>'.html_safe, new_nutrition_path
+    %br
+%br
+%table{:border => 1}
+    %tbody
+        %tr
+            %td= "Height"
+            %td= "Weight"
+            %td= "Age"
+            %td= "Caloric Intake"
+    - @nutritions.each do |nutrition|
+        %tr
+            %td= link_to(nutrition.height, {:action => 'show', :id => nutrition.id}, :class => 'action show')
+            %td= nutrition.weight
+            %td= nutrition.age
+            %td= nutrition.calories
+%br
 %center
     Calorie Intake Calculator
     %br
-
 %table{:border => 1, id: "calculator"}
     %tbody
         %tr
