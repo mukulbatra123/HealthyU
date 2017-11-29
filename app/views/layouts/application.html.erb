@@ -9,7 +9,24 @@
 <body>
 
 <%= yield %>
-
-
+<table>
+  <tr>
+    <td>
+      <%= link_to "Home", '/', {id: "newexer"} %>
+    </td>
+    <td>
+      <%= link_to "About Us", '', {id: "newexer"} %>
+    </td>
+    <td>
+      <%= link_to "Exercises Page", '/exercises', {id: "newexer"} %>
+    </td>
+    <td>
+      <%= link_to "Nutritions Page", 'nutritions', {id: "newexer"} %>
+    </td>
+    <td>
+      <%= link_to "Contact Us", '', {id: "newexer"} %>
+    </td>
+  </tr>
+</table>
 </body>
 </html>

@@ -39,7 +39,7 @@ Given(/^I am on the exercise page$/) do
 end
 
 Given(/^I am on the nutrition page$/) do
-  visit "/nutrition"
+  visit "/nutritions"
 end
 
 Then /I should be on the exercises page/ do
@@ -56,6 +56,10 @@ end
 
 Then /I should see the title "Exercises"/ do
   page.should have_content("Exercises")
+end
+
+Then /I should see "([^"]*)"$/ do |value|
+  page.should have_content(value)
 end
 
 Then /I should see "([^"]*)" and "([^"]*)"$/ do |muscle, exercise|

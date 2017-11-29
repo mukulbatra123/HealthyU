@@ -23,15 +23,8 @@
 %br
         
 %br
+%center
+    = link_to 'Exercises', exercises_path, {id: "links"} 
 
-= link_to 'Exercises', exercises_path, {id: "links"} 
+    = link_to 'Nutrition', nutritions_path, {id: "links"} 
 
-= link_to 'Nutrition', nutritions_path, {id: "links"} 
-
-%table
-    %tr
-        %td= link_to "Home", '/', {id: "newexer"}
-        %td= link_to "About Us", '', {id: "newexer"}
-        %td= link_to 'Exercise Page', exercises_path, {id: "newexer"}
-        %td= link_to 'Nutrition Page', nutritions_path, {id: "newexer"}
-        %td= link_to "Contact Us", '', {id: "newexer"}

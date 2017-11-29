@@ -8,12 +8,12 @@ describe NutritionsController, type: :controller do
     end
   end
   describe 'get show' do
-    let!(:chin) {Nutrition.create}
+    let!(:info) {Nutrition.create}
     before(:each) do
-      get :show, id: chin.id
+      get :show, id: info.id
     end
     it 'should find the exercise' do
-      expect(assigns(:nutrition)).to eql(chin)
+      expect(assigns(:nutrition)).to eql(info)
     end
     it 'should render the show template' do
       expect(response).to render_template('show')
@@ -31,40 +31,40 @@ describe NutritionsController, type: :controller do
       @nutri1 = double('nutri1')
     end
     it 'redirects to the nutrition page' do
-      post :create, exercise: FactoryBot.attributes_for(:nutrition)
+      post :create, nutrition: FactoryBot.attributes_for(:nutrition)
       expect(response).to redirect_to('/nutritions')
     end
   end
   describe 'get edit' do
-    let!(:chin) {Nutrition.create}
+    let!(:info) {Nutrition.create}
     before do
-      get :edit, id: chin.id
+      get :edit, id: info.id
     end
     it 'should find the nutrition' do
-      expect(assigns(:nutrition)).to eql(chin)
+      expect(assigns(:nutrition)).to eql(info)
     end
     it 'should render the edit template' do
       expect(response).to render_template('edit')
     end
   end
   describe 'put update' do
-    let!(:chin) {Nutrition.create}
+    let!(:info) {Nutrition.create}
     before(:each) do
-      put :update, id: chin.id, exercise: FactoryBot.attributes_for(:nutrition, description: 'Updated')
+      put :update, id: info.id, nutrition: FactoryBot.attributes_for(:nutrition, height: 'newVal')
     end
     it 'updates the nutritions' do
-      chin.reload
-      expect(chin.description).to eql('Updated')
+      info.reload
+      expect(info.height).to eql('newVal')
     end
   end
   describe 'destroy' do
-    let!(:chin) { FactoryBot.create(:nutrition) }
+    let!(:info) { FactoryBot.create(:nutrition) }
     it 'destroys the calories' do
-      expect { delete :destroy, id: chin.id
+      expect { delete :destroy, id: info.id
       }.to change(Nutrition, :count).by(-1)
     end
     it 'redirects to the nutrition page' do
-      delete :destroy, id: chin.id
+      delete :destroy, id: info.id
       expect(response).to redirect_to('/nutritions')
     end
 end
