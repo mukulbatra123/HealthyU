@@ -2,6 +2,11 @@ Given(/^I have not opened the application$/) do
   
 end
 
+
+Given /I am on the homepage/ do
+  visit "/"
+end
+
 When("I click the exercise link") do
   click_link("Exercises")
 end
@@ -30,10 +35,6 @@ Then /I should be on the homepage/ do
   visit "/"
 end
 
-Given(/^I am on the homepage$/) do
-  visit "/"
-end
-
 Given(/^I am on the exercise page$/) do
   visit "/exercises"
 end
@@ -48,6 +49,10 @@ end
 
 Then /I should be on the nutrition page/ do
   visit nutritions_path
+end
+
+Then /I should be on the login page/ do
+  visit users_path
 end
   
 Then /I should see the title "HealthyU"/ do

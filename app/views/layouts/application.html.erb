@@ -18,7 +18,7 @@
       <%= link_to "About Us", '', {id: "newexer"} %>
     </td>
     <td>
-      <%= link_to "Exercises Page", '/exercises', {id: "newexer"} %>
+      <%= link_to "Exercises Page", exercises_path, {id: "newexer"} %>
     </td>
     <td>
       <%= link_to "Nutritions Page", 'nutritions', {id: "newexer"} %>
@@ -34,7 +34,6 @@
 
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "HealthyU", '/', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
@@ -48,7 +47,7 @@
               <li><%= link_to "Profile", current_user %></li>
               <li><%= link_to "Settings", '#' %></li>
               <li><%= link_to "Users", users_path %></li>
-              <li><%= link_to "Exercises", exercise_path(current_user) %></li>
+              <li><%= link_to "Exercise", exercise_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>
