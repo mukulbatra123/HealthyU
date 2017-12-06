@@ -1,10 +1,48 @@
-%h1{id: "heading"} Exercises
+%center
+    = image_tag("exercise.jpg", :alt => "HealthyU", size: "500x200", :id => 'image' ) 
 
-
+%br
 Exercise is one of the most important parts of keeping your body at a healthy weight. Exercise helps people lose weight and lower the risk of some diseases. Exercising to maintain a healthy weight decreases a person's risk of developing certain diseases
 
 %hr 
 
+%br
+%br
+
+
+%br
+%br
+
+%center
+    Input the exercises you have completed for the week
+%br
+%center
+    = link_to '<button type="button">Add New Exercise</button>'.html_safe, new_exercise_path
+
+%br
+%br
+
+%table{:border => 1}
+    %tbody
+        %tr
+            %td= "Muscle"
+            %td= "Exercise"
+    - @exercises.each do |exercise|
+        %tr
+            %td= link_to(exercise.muscle, {:action => 'show', :id => exercise.id}, :class => 'action show')
+            %td= exercise.description
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
 %br
 %br
 
@@ -19,35 +57,8 @@ Exercise is one of the most important parts of keeping your body at a healthy we
             %th= link_to "Legs", '#legs', :id => 'exercise'
             %th= link_to "Abs", '#abs', :id => 'exercise'
             %th= link_to "Cardio", '#cardio', :id => 'exercise'
-%br
-%br
+            
 
-Input the exercises you have completed for the week
-
-%table{:border => 1}
-    %tbody
-        %tr
-            %td= "Muscle"
-            %td= "Exercise"
-    - @exercises.each do |exercise|
-        %tr
-            %td= link_to(exercise.muscle, {:action => 'show', :id => exercise.id}, :class => 'action show')
-            %td= exercise.description
-%br
-= link_to '<button type="button">Add New Exercise</button>'.html_safe, new_exercise_path
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
 %br
 %br
 %br

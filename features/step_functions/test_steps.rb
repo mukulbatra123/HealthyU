@@ -2,9 +2,18 @@ Given(/^I have not opened the application$/) do
   
 end
 
-
 Given /I am on the homepage/ do
   visit "/"
+end
+
+Given /I am on the users page/ do
+  visit users_path
+end
+
+Given /The user is logged in/ do
+  User.all.each do |user|
+    User.create(user)
+  end
 end
 
 When("I click the exercise link") do
@@ -19,8 +28,8 @@ When("I click on the muscle link") do
   click_link("Chest")
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_link(button)
+When /^(?:|I )press "([^"]*)"$/ do |link|
+  click_link(link)
 end
 
 And /^(?:|I )press the "([^"]*)" button$/ do |button|
@@ -51,8 +60,20 @@ Then /I should be on the nutrition page/ do
   visit nutritions_path
 end
 
-Then /I should be on the login page/ do
+Then /I should be on the users page/ do
   visit users_path
+end
+
+Then /I should be on the login page/ do
+  visit login_path
+end
+
+Then /I should be on the signup page/ do
+  visit signup_path
+end
+
+Then /I should be on the current users page/ do
+  visit users_path(1)
 end
   
 Then /I should see the title "HealthyU"/ do
@@ -65,6 +86,12 @@ end
 
 Then /I should see "([^"]*)"$/ do |value|
   page.should have_content(value)
+end
+
+Then /I should see all the users/ do
+  User.all.each do |user|
+    step "I should see \"#{user.name}\""
+  end
 end
 
 Then /I should see "([^"]*)" and "([^"]*)"$/ do |muscle, exercise|

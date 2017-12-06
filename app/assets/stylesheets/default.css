@@ -12,6 +12,12 @@ td#exer1{
     font-style: normal;
 }
 
+#image
+{
+    float: center;
+    
+}
+
 table#exer
 {
    border-color: white;

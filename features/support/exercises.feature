@@ -16,8 +16,8 @@ Feature: display the exercise page
   Scenario: Adding exercises
     Given I am on the exercise page
     When I press "Add New Exercise"
-    And I fill in "muscle" with "Eye"
-    And I fill in "description" with "Blink"
+    And I fill in "Muscle" with "Eye"
+    And I fill in "Description" with "Blink"
     When I press the "Save Exercise" button
     Then I should see "Eye" and "Blink"
     
@@ -25,14 +25,14 @@ Feature: display the exercise page
     Given I am on the exercise page
     # background
     When I press "Add New Exercise"
-    And I fill in "muscle" with "Eye"
-    And I fill in "description" with "Blink"
+    And I fill in "Muscle" with "Eye"
+    And I fill in "Description" with "Blink"
     When I press the "Save Exercise" button
     Then I should see "Eye" and "Blink"
     # background
     When I press "Eye"
     And I press "Edit"
-    And I fill in "muscle" with "Eyeball"
+    And I fill in "Muscle" with "Eyeball"
     When I press the "Update Muscle Info" button
     And I should see "Eyeball" and "Blink"
     
@@ -40,8 +40,8 @@ Feature: display the exercise page
     Given I am on the exercise page
     # background
     When I press "Add New Exercise"
-    And I fill in "muscle" with "Eye"
-    And I fill in "description" with "Blink"
+    And I fill in "Muscle" with "Eye"
+    And I fill in "Description" with "Blink"
     When I press the "Save Exercise" button
     Then I should see "Eye" and "Blink"
     # background

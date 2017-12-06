@@ -2,10 +2,10 @@
 
 = form_tag exercise_path(@exercise), :method => :put do
 
-  = label :exercise, :muscle, 'muscle'
+  = label :exercise, :muscle, 'Muscle'
   = text_field :exercise, 'muscle'
 
-  = label :exercise, :description, 'description'
+  = label :exercise, :description, 'Description'
   = text_field :exercise, 'description'
 
   = submit_tag 'Update Muscle Info'
